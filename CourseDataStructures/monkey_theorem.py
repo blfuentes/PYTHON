@@ -82,6 +82,13 @@ def hillClimbing(inputString):
         print("")
 
     print("Number of attempts: %d"%counter)
+
+    return counter
     
 #runCheck(targetString)
-hillClimbing(targetString)
+myResults = list()
+for idx in range(5):
+    myResults.append(hillClimbing(targetString))
+
+print ("All results:")
+print (myResults)
