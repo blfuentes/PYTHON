@@ -1,5 +1,6 @@
 import string
 import random
+import statistics as sts
 
 charList = list(string.ascii_lowercase)
 charList.append(' ')
@@ -92,3 +93,4 @@ for idx in range(5):
 
 print ("All results:")
 print (myResults)
+print ("Average: %.2f"%sts.mean(myResults))
