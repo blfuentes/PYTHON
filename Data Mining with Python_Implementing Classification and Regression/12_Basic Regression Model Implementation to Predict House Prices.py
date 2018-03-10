@@ -28,7 +28,12 @@ regr.fit(train_x, train_y)
 #fit the model
 plt.scatter(train_x, train_y, color = 'blue')
 plt.plot(train_x, regr.predict(train_x), color = 'red', linewidth = 4)
-plt.show()
+# plt.show()
 
 #predict price for 700sq
-print(regr.predict(700))
+prediction = regr.predict(700)
+print(prediction)
+
+#extra
+plt.scatter(700, prediction, color = 'red')
+plt.show()
