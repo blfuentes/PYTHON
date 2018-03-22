@@ -3,9 +3,8 @@ Python Test projects
 
 Update all pip packages: 
 
-///////////////////////////////////////////////////
-//   https://stackoverflow.com/a/5839291/452038  //
-///////////////////////////////////////////////////
+https://stackoverflow.com/a/5839291/452038 
+
 import pip
 from subprocess import call
 
