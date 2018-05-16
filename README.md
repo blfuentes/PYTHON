@@ -14,6 +14,7 @@ packages = [dist.project_name for dist in pip.get_installed_distributions()]
 call("pip install --upgrade " + ' '.join(packages), shell=True)
 
 
+pip3 list --outdated --format=legacy | ForEach { pip3 install -U $_.split(" ")[0] }
 
 
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
