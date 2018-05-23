@@ -16,6 +16,11 @@ call("pip install --upgrade " + ' '.join(packages), shell=True)
 
 pip3 list --outdated --format=legacy | ForEach { pip3 install -U $_.split(" ")[0] }
 
+.\pip.exe list --outdated
+.\pip.exe list --outdated --format=legacy | ForEach { .\pip.exe install -U $_.split(" ")[0] }
+
+.\conda.exe update --all
+
 
 pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 
